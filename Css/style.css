@@ -346,7 +346,8 @@ main {
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    grid-template-rows: auto;
+    gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
     width: 100%;
@@ -372,7 +373,22 @@ main {
     background-color: rgba(30, 41, 59, 0.8);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
+.stat-card:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
 
+.stat-card:nth-child(2) {
+    grid-column: span 2;
+}
+
+.stat-card:nth-child(3) {
+    grid-column: span 1;
+}
+
+.stat-card:nth-child(4) {
+    grid-column: span 1;
+}
 .stat-icon {
     font-size: 2.5rem;
     margin-bottom: 15px;
@@ -428,9 +444,11 @@ footer {
     line-height: 1.6;
 }
 
-.footer-links ul li a.active {
-    color: #ffcc00;
-    text-decoration: underline;
+.footer-links ul li a.active,
+.footer-legal ul li a.active {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
 }
 
 .footer-links h3,
@@ -999,7 +1017,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
+    padding: 140px 40px 20px;
     min-height: 80vh;
     font-family: 'Oswald', sans-serif;
 }
@@ -1197,6 +1215,83 @@ footer {
     cursor: pointer;
 }
 
+
+/* ===== PAGES LÉGALES ===== */
+.legal-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 120px 40px 80px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.legal-page h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.legal-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+}
+
+.legal-block {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.legal-block:last-child {
+    border-bottom: none;
+}
+
+.legal-block h2 {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.legal-block p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.legal-block ul {
+    list-style: none;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.legal-block ul li {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    padding-left: 25px;
+    margin-bottom: 6px;
+    position: relative;
+}
+
+.legal-block ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    opacity: 0.6;
+}
+
+.legal-block a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.legal-block a:hover {
+    opacity: 0.7;
+}
 /* ===== MEDIA QUERIES ===== */
 
 @media (max-width: 1024px) {
