@@ -68,3 +68,84 @@ if (textarea) {
         this.style.height = this.scrollHeight + 'px';
     });
 }
+// ===== GALERIE - FILTRES =====
+const filtresBtns = document.querySelectorAll('.filtre-btn');
+if (filtresBtns.length > 0) {
+    const galerieItems = document.querySelectorAll('.galerie-item');
+    const galerieVide = document.getElementById('galerieVide');
+
+    filtresBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filtresBtns.forEach(b => b.classList.remove('actif'));
+            btn.classList.add('actif');
+            const filtre = btn.dataset.filtre;
+            let visibles = 0;
+            galerieItems.forEach(item => {
+                if (filtre === 'tous' || item.dataset.categorie === filtre) {
+                    item.classList.remove('hidden');
+                    visibles++;
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+            if (galerieVide) galerieVide.style.display = visibles === 0 ? 'block' : 'none';
+        });
+    });
+
+    // ===== LIGHTBOX =====
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitre = document.getElementById('lightboxTitre');
+    const lightboxTag = document.getElementById('lightboxTag');
+    const lightboxCompteur = document.getElementById('lightboxCompteur');
+
+    let indexCourant = 0;
+    let itemsVisibles = [];
+
+    function afficherLightbox() {
+        const item = itemsVisibles[indexCourant];
+        lightboxImg.src = item.querySelector('img').src;
+        lightboxImg.alt = item.querySelector('img').alt;
+        lightboxTitre.textContent = item.dataset.titre;
+        lightboxTag.textContent = item.dataset.tag;
+        lightboxCompteur.textContent = (indexCourant + 1) + ' / ' + itemsVisibles.length;
+    }
+
+    function fermerLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    galerieItems.forEach(item => {
+        item.addEventListener('click', () => {
+            itemsVisibles = [...galerieItems].filter(i => !i.classList.contains('hidden'));
+            indexCourant = itemsVisibles.indexOf(item);
+            afficherLightbox();
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', fermerLightbox);
+
+    document.getElementById('lightboxPrev').addEventListener('click', () => {
+        indexCourant = (indexCourant - 1 + itemsVisibles.length) % itemsVisibles.length;
+        afficherLightbox();
+    });
+
+    document.getElementById('lightboxNext').addEventListener('click', () => {
+        indexCourant = (indexCourant + 1) % itemsVisibles.length;
+        afficherLightbox();
+    });
+
+    lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) fermerLightbox();
+    });
+
+    document.addEventListener('keydown', e => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') fermerLightbox();
+        if (e.key === 'ArrowLeft') { indexCourant = (indexCourant - 1 + itemsVisibles.length) % itemsVisibles.length; afficherLightbox(); }
+        if (e.key === 'ArrowRight') { indexCourant = (indexCourant + 1) % itemsVisibles.length; afficherLightbox(); }
+    });
+}

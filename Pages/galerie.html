@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Contactez DigitAlu pour vos projets menuiserie aluminium et outils numériques.">
-   <title>Galerie - DigitAlu</title>
-   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="../Css/style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <script src="../Js/script.js" defer></script>
- </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galerie de réalisations DigitAlu - Menuiserie aluminium, conception et chantiers BTP">
+    <title>Galerie - DigitAlu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="../Js/script.js" defer></script>
+</head>
 <body>
-<!-- NAVBAR -->
 <header class="navbar" id="navbar">
     <div class="navbar-inner">
-        
-        <!-- LOGO -->
         <a href="../index.html" class="navbar-logo">
             <img src="../LOGO/logo-digitalu.png" alt="DigitAlu">
             <span class="navbar-logo-text">DigitAlu</span>
         </a>
-
-        <!-- LIENS -->
         <nav class="navbar-nav">
             <a href="../index.html" class="nav-link">Accueil</a>
             <a href="a-propos.html" class="nav-link">À Propos</a>
@@ -29,68 +24,254 @@
             <a href="projets.html" class="nav-link">Projets</a>
             <a href="contact.html" class="nav-link">Contact</a>
         </nav>
-
-        <!-- CTA + BURGER -->
         <div class="navbar-right">
             <a href="contact.html" class="navbar-cta">
                 <span>Parlons de votre projet</span>
                 <i class="fas fa-arrow-right"></i>
             </a>
             <button class="navbar-burger" id="navBurger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </div>
-
-    <!-- MENU MOBILE -->
     <div class="navbar-mobile" id="navMobile">
-        <a href="../index.html" class="nav-link-mobile active">Accueil</a>
+        <a href="../index.html" class="nav-link-mobile">Accueil</a>
         <a href="a-propos.html" class="nav-link-mobile">À Propos</a>
-        <a href="galerie.html" class="nav-link-mobile">Galerie</a>
+        <a href="galerie.html" class="nav-link-mobile active">Galerie</a>
         <a href="projets.html" class="nav-link-mobile">Projets</a>
         <a href="contact.html" class="nav-link-mobile">Contact</a>
         <a href="contact.html" class="navbar-cta-mobile">Parlons de votre projet →</a>
     </div>
-  </header>
+</header>
 
 <main>
+    <section class="galerie-page">
+        <div class="galerie-header">
+            <h1>Mes Réalisations</h1>
+            <p>De la conception sur AutoCAD à la finition sur chantier — 20 ans d'expertise menuiserie aluminium au service de projets exigeants.</p>
+        </div>
 
+        <div class="galerie-filtres">
+            <button class="filtre-btn actif" data-filtre="tous">Tout voir</button>
+            <button class="filtre-btn" data-filtre="conception">Conceptions Diverses</button>
+            <button class="filtre-btn" data-filtre="extenso">Chantier Mauguio</button>
+            <button class="filtre-btn" data-filtre="verriere">Chantier Clermont L’Hérault</button>
+            <button class="filtre-btn" data-filtre="cinema">Chantier Frontignan</button>
+            <button class="filtre-btn" data-filtre="facade">Chantier Béziers</button>
+        </div>
+
+        <div class="galerie-grid" id="galerieGrid">
+
+            <div class="galerie-item" data-categorie="conception" data-titre="Coupe technique" data-tag="Conception AutoCAD">
+                <img src="../Galerie/CHANTIER/AUTOCAD/autocad 1.png" alt="Plan technique menuiserie aluminium" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Coupe Horizontale OF</p>
+                    <span class="galerie-overlay-tag">Conception AutoCAD</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="conception" data-titre="Plan de détail châssis ALU" data-tag="Conception AutoCAD">
+                <img src="../Galerie/CHANTIER/AUTOCAD/autocad 2.png" alt="Plan de détail châssis aluminium" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Elevation Ensemble Composé</p>
+                    <span class="galerie-overlay-tag">Conception AutoCAD</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="conception" data-titre="Coupe verticale menuiserie" data-tag="Conception AutoCAD">
+                <img src="../Galerie/CHANTIER/AUTOCAD/autocad3.png" alt="Coupe verticale menuiserie aluminium" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Coupe verticale OF sur Allège</p>
+                    <span class="galerie-overlay-tag">Conception AutoCAD</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="extenso" data-titre="Extenso — Avant travaux" data-tag="Projet Extenso · Chantier">
+                <img src="../Galerie/CHANTIER/Mauguio/Equation 1.jpg" alt="Immeuble de bureaux Extenso avant travaux" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Façade Aluminium</p>
+                    <span class="galerie-overlay-tag">Chantier Mauguio</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="extenso" data-titre="Extenso — Structure métallique" data-tag="Projet Extenso · Pose">
+                <img src="../Galerie/CHANTIER/Mauguio/equation 2.jpg" alt="Pose structure métallique Extenso" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Façade Aluminium</p>
+                    <span class="galerie-overlay-tag">Chantier Mauguio</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="extenso" data-titre="Extenso — Finition façade" data-tag="Projet Extenso · Finition">
+                <img src="../Galerie/CHANTIER/Mauguio/equation 3.jpg" alt="Façade immeuble Extenso finalisée" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Façade Aluminium</p>
+                    <span class="galerie-overlay-tag">Chantier Mauguio</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="extenso" data-titre="Extenso — Vue d'ensemble" data-tag="Projet Extenso · Livraison">
+                <img src="../Galerie/CHANTIER/Mauguio/equation 4.jpg" alt="Vue d'ensemble immeuble Extenso livré" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Façade Aluminium</p>
+                    <span class="galerie-overlay-tag">Chantier Mauguio</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="verriere" data-titre="Verrière — Structure en cours" data-tag="Projet Verrière · Charpente">
+                <img src="../Galerie/CHANTIER/Clermont/IMG_20240716_100532.jpg" alt="Structure charpente métallique verrière" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Façade Vitrée</p>
+                    <span class="galerie-overlay-tag">Chantier Clermont L’Hérault</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="verriere" data-titre="Verrière — Pose des vitrages" data-tag="Projet Verrière · Pose">
+                <img src="../Galerie/CHANTIER/Clermont/IMG_20241220_101107.jpg" alt="Pose des vitrages verrière" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Façade Vitrée</p>
+                    <span class="galerie-overlay-tag">Chantier Clermont L’Hérault</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="verriere" data-titre="Verrière — Finition" data-tag="Projet Verrière · Livraison">
+                <img src="../Galerie/CHANTIER/Clermont/1000016504.jpg" alt="Verrière finalisée" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Façade Vitrée</p>
+                    <span class="galerie-overlay-tag">Chantier Clermont L’Hérault</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="verriere" data-titre="Verrière — Finition" data-tag="Projet Verrière · Livraison">
+                <img src="../Galerie/CHANTIER/Clermont/IMG_20241220_101117.jpg" alt="Verrière finalisée" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Façade Vitrée</p>
+                    <span class="galerie-overlay-tag">Chantier Clermont L’Hérault</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="cinema" data-titre="Cinéma — Gros œuvre" data-tag="Projet Cinéma · Chantier">
+                <img src="../Galerie/CHANTIER/Frontignan/1000016545.jpg" alt="Gros œuvre cinéma" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Mur rideau</p>
+                    <span class="galerie-overlay-tag">Chantier Frontignan</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="cinema" data-titre="Cinéma — Pose menuiseries" data-tag="Projet Cinéma · Pose">
+                <img src="../Galerie/CHANTIER/Frontignan/1000016544.jpg" alt="Pose menuiseries cinéma" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Mur rideau</p>
+                    <span class="galerie-overlay-tag">Chantier Frontignan</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="cinema" data-titre="Cinéma — Entrée principale" data-tag="Projet Cinéma · Finition">
+                <img src="../Galerie/CHANTIER/Frontignan/IMG_20240729_160438.jpg" alt="Entrée principale cinéma finalisée" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Mur rideau</p>
+                    <span class="galerie-overlay-tag">Chantier Frontignan</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="cinema" data-titre="Cinéma Quai des Lumières" data-tag="Projet Cinéma · Livraison">
+                <img src="../Galerie/CHANTIER/Frontignan/1000016542.jpg" alt="Cinéma Quai des Lumières livré" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Mur rideau</p>
+                    <span class="galerie-overlay-tag">Chantier Frontignan</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="cinema" data-titre="Cinéma Quai des Lumières" data-tag="Projet Cinéma · Livraison">
+                <img src="../Galerie/CHANTIER/Frontignan/IMG_20250926_093359.jpg" alt="Cinéma Quai des Lumières livré" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Mur rideau</p>
+                    <span class="galerie-overlay-tag">Chantier Frontignan</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="cinema" data-titre="Cinéma Quai des Lumières" data-tag="Projet Cinéma · Livraison">
+                <img src="../Galerie/CHANTIER/Frontignan/IMG_20241204_110028.jpg" alt="Cinéma Quai des Lumières livré" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Mur rideau</p>
+                    <span class="galerie-overlay-tag">Chantier Frontignan</span>
+                </div>
+            </div>
+
+            <div class="galerie-item" data-categorie="facade" data-titre="Façade commerciale — Livraison" data-tag="Façades & Résidentiel">
+                <img src="../Galerie/CHANTIER/Beziers/1000016500.jpg" alt="Façade commerciale aluminium" loading="lazy">
+                <div class="galerie-overlay">
+                    <div class="galerie-overlay-icon"><i class="fas fa-search-plus"></i></div>
+                    <p class="galerie-overlay-titre">Mur rideau</p>
+                    <span class="galerie-overlay-tag">Chantier Frontignan</span>
+                </div>
+              </div>
+
+        </div>
+        <div class="galerie-vide" id="galerieVide">Aucune réalisation dans cette catégorie pour l'instant.</div>
+    </section>
 </main>
 
-<!--FOOTER-->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-inner">
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+        <div class="lightbox-info">
+            <p class="lightbox-titre" id="lightboxTitre"></p>
+            <p class="lightbox-tag" id="lightboxTag"></p>
+            <p class="lightbox-compteur" id="lightboxCompteur"></p>
+        </div>
+    </div>
+</div>
 
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="../LOGO/logo-digitalu.png" alt="Logo DigitAlu">
-      <p>Le numérique et la digitalisation par un homme de terrain.</p>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="../LOGO/logo-digitalu.png" alt="Logo DigitAlu">
+            <p>Le numérique et la digitalisation par un homme de terrain.</p>
+        </div>
+        <div class="footer-links">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="a-propos.html">À Propos</a></li>
+                <li><a href="galerie.html" class="active">Galerie</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-legal">
+            <h3>Informations légales</h3>
+            <ul>
+                <li><a href="mentions-legales.html">Mentions légales</a></li>
+                <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                <li><a href="cgu.html">CGU</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="footer-links">
-      <h3>Navigation</h3>
-      <ul>
-        <li><a href="../index.html">Accueil</a></li>
-        <li><a href="a-propos.html">À Propos</a></li>
-        <li><a href="galerie.html" class="active">Galerie</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div class="footer-bottom">
+        <p>© 2026 DigitAlu - Tous droits réservés</p>
     </div>
-    <div class="footer-legal">
-      <h3>Informations légales</h3>
-      <ul>
-        <li><a href="../Info Legales/mention-legales.html">Mentions légales</a></li>
-        <li><a href="../Info Legales/politique-confidentialite.html">Politique de confidentialité</a></li>
-        <li><a href="../Info Legales/cgu.html">CGU</a></li>
-        <li><a href="../Info Legales/cookies.html">Cookies</a></li>
-      </ul>
-    </div>
-
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 DigitAlu - Tous droits réservés</p>
-  </div>
 </footer>
-
 </body>
+</html>
