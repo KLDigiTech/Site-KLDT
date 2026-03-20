@@ -149,3 +149,24 @@ if (filtresBtns.length > 0) {
         if (e.key === 'ArrowRight') { indexCourant = (indexCourant + 1) % itemsVisibles.length; afficherLightbox(); }
     });
 }
+
+// ===== SLIDER PROJETS =====
+document.querySelectorAll('[data-slider]').forEach(slider => {
+    const track = slider.querySelector('.slider-track');
+    const images = slider.querySelectorAll('img');
+    const dots = slider.querySelectorAll('.dot');
+    const prev = slider.querySelector('.slider-prev');
+    const next = slider.querySelector('.slider-next');
+    let index = 0;
+
+    function aller(n) {
+        index = (n + images.length) % images.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach(d => d.classList.remove('actif'));
+        dots[index].classList.add('actif');
+    }
+
+    prev.addEventListener('click', () => aller(index - 1));
+    next.addEventListener('click', () => aller(index + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => aller(i)));
+});
