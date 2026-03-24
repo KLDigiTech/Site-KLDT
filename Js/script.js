@@ -57,7 +57,8 @@ if (contactForm) {
             btnEnvoyer.querySelector('.btn-text').textContent = 'Envoyé !';
             btnEnvoyer.querySelector('.btn-text').style.opacity = '1';
             btnEnvoyer.classList.add('sent');
-            contactForm.reset();
+            contactForm.submit();
+            contactForm.reset();      
         }, 2000);
     });
 }

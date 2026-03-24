@@ -58,7 +58,7 @@
 <main>
 <section class="contact">
   <h1>Contactez-moi</h1>
-  <form id="contactForm">
+  <form id="contactForm" action="https://formspree.io/f/xkoqdall" method="POST">
     <div class="input-group">
       <input type="text" id="nom" name="nom" placeholder=" " required>
       <label for="nom">Nom</label>
@@ -77,7 +77,7 @@
     </div>
     <div class="input-group">
       <select name="sujet" id="sujet" required>
-        <option value=""></option>
+        <option value="" disabled selected></option>
         <option value="site_vitrine">Site Vitrine</option>
         <option value="logiciel">Logiciel Sur Mesure</option>
         <option value="bureau_etudes">Bureau d’Études ALU</option>
