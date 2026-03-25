@@ -710,7 +710,19 @@ footer {
     color: var(--text-secondary);
     cursor: pointer;
 }
+.form-group input[type="file"] {
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px dashed #ccc; /* Effet pointillé pour montrer qu'on peut glisser un fichier */
+    width: 100%;
+    cursor: pointer;
+}
 
+.help-text {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
 /* ===== A PROPOS ===== */
 .accent { color: var(--accent); }
 

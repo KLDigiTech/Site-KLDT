@@ -58,6 +58,7 @@ if (contactForm) {
             btnEnvoyer.querySelector('.btn-text').style.opacity = '1';
             btnEnvoyer.classList.add('sent');
             contactForm.submit();
+            localStorage.clear();
             contactForm.reset();      
         }, 2000);
     });
@@ -171,3 +172,27 @@ document.querySelectorAll('[data-slider]').forEach(slider => {
     next.addEventListener('click', () => aller(index + 1));
     dots.forEach((dot, i) => dot.addEventListener('click', () => aller(i)));
 });
+
+// ===== PERSISTANCE DU FORMULAIRE (LocalStorage) =====
+if (contactForm) {
+    const champs = contactForm.querySelectorAll('input, textarea, select');
+
+    // On remet les infos si elles existent en mémoire
+    window.addEventListener('load', () => {
+        champs.forEach(champ => {
+            const sauvegarde = localStorage.getItem(champ.id);
+            if (sauvegarde && champ.type !== 'checkbox') {
+                champ.value = sauvegarde;
+            }
+        });
+    });
+
+    // On enregistre à chaque fois que l'utilisateur écrit
+    champs.forEach(champ => {
+        champ.addEventListener('input', () => {
+            if (champ.type !== 'checkbox') {
+                localStorage.setItem(champ.id, champ.value);
+            }
+        });
+    });
+}

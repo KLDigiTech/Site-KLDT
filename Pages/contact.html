@@ -58,6 +58,7 @@
 <main>
 <section class="contact">
   <h1>Contactez-moi</h1>
+  <form action="ton-script.php" method="POST" enctype="multipart/form-data"></form>
   <form id="contactForm" action="https://formspree.io/f/xkoqdall" method="POST">
     <div class="input-group">
       <input type="text" id="nom" name="nom" placeholder=" " required>
@@ -84,6 +85,11 @@
         <option value="autre">Autre</option>
       </select>
       <label for="sujet">Sujet</label>
+    </div>
+    <div class="form-group">
+      <label for="">Joindre un fichier</label>
+      <input type="file" id="fichier" name="fichier" accept=".pdf, .jpg, .jpeg, .dwg, .png, .dwg, .dxf">
+      <p class="help-text">Taille max : 10 Mo</p>
     </div>
     <div class="input-group">
       <textarea name="message" id="message" placeholder=" " required></textarea>
