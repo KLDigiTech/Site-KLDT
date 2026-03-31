@@ -63,6 +63,7 @@ img {
 .navbar-logo img {
     width: 55px;
     height: 55px;
+    border-radius: 50%;
     object-fit: contain;
 }
 
@@ -307,7 +308,7 @@ main {
     margin-top: 40px;
     padding: 15px 35px;
     border: 2px solid transparent;
-    background-color:var(--accent);
+    background-color: var(--accent);
     color: var(--bg-primary);
     border-radius: 30px;
     text-decoration: none;
@@ -456,7 +457,12 @@ main {
     background-color: rgba(30, 41, 59, 0.8);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
-
+.service-card img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
 .service-card:hover {
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
     transform: translateY(-10px);
@@ -535,8 +541,8 @@ footer {
 
 .footer-brand img {
     width: 250px;
-    height: 250px;
-    object-fit: contain;
+    height: 150px;
+    border-radius: 20px;
 }
 
 .footer-brand p {
@@ -612,7 +618,11 @@ footer {
     font-family: 'Oswald', sans-serif;
     margin-bottom: 40px;
 }
-
+.BuildKL-hero img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
 .BuildKL-hero h1 {
     color: var(--text-primary);
     font-size: 4rem;
