@@ -2608,13 +2608,16 @@ footer {
     }
 
     .work-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat 1fr;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
     }
-
+.problem-grid,
+.solution-grid {
+    grid-template-columns: 1fr;
+}
     .service-card:nth-child(1),
     .service-card:nth-child(2),
     .service-card:nth-child(3),
