@@ -4,15 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contactez KLDigiTech pour vos projets menuiserie aluminium et outils numériques.">
+  <meta name="description"
+    content="Contactez KLDigiTech pour vos besoins en bureau d'études, dessin technique AutoCAD 2D, menuiserie aluminium, PVC et façades.">
   <title>Contact - KLDigiTech</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../Css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <script src="../Js/script.js" defer></script>
 </head>
 
 <body>
+
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="navbar-inner">
@@ -27,6 +31,7 @@
       <nav class="navbar-nav">
         <a href="../index.html" class="nav-link">Accueil</a>
         <a href="a-propos.html" class="nav-link">À Propos</a>
+        <a href="prestations.html" class="nav-link">Prestations</a>
         <a href="galerie.html" class="nav-link">Galerie</a>
         <a href="projets.html" class="nav-link">Projets</a>
         <a href="BuildKL.html" class="nav-link">BuildKL</a>
@@ -39,6 +44,7 @@
           <span>Parlons de votre projet</span>
           <i class="fas fa-arrow-right"></i>
         </a>
+
         <button class="navbar-burger" id="navBurger" aria-label="Menu">
           <span></span>
           <span></span>
@@ -49,98 +55,135 @@
 
     <!-- MENU MOBILE -->
     <div class="navbar-mobile" id="navMobile">
-      <a href="../index.html" class="nav-link-mobile active">Accueil</a>
+      <a href="../index.html" class="nav-link-mobile">Accueil</a>
       <a href="a-propos.html" class="nav-link-mobile">À Propos</a>
+      <a href="prestations.html" class="nav-link-mobile">Prestations</a>
       <a href="galerie.html" class="nav-link-mobile">Galerie</a>
       <a href="projets.html" class="nav-link-mobile">Projets</a>
-      <a href="BuildKL.html" class="nav-link-mobile active">BuildKL</a>
-      <a href="contact.html" class="nav-link-mobile">Contact</a>
+      <a href="BuildKL.html" class="nav-link-mobile">BuildKL</a>
+      <a href="contact.html" class="nav-link-mobile active">Contact</a>
       <a href="contact.html" class="navbar-cta-mobile">Parlons de votre projet →</a>
     </div>
   </header>
-  <!--FORMULAIRE-->
+
+  <!-- FORMULAIRE -->
   <main>
     <section class="contact">
+
       <h1>Contactez-moi</h1>
+
       <form id="contactForm" action="https://formspree.io/f/xykbyqzq" method="POST">
+
+        <!-- NOM -->
         <div class="input-group">
-          <input type="text" id="nom" name="nom" placeholder=" " required>
+          <input type="text" id="nom" name="nom" placeholder=" " autocomplete="name" required>
           <label for="nom">Nom</label>
         </div>
+
+        <!-- SOCIETE -->
         <div class="input-group">
-          <input type="text" id="societe" name="societe" placeholder=" ">
+          <input type="text" id="societe" name="societe" placeholder=" " autocomplete="organization">
           <label for="societe">Société</label>
         </div>
+
+        <!-- EMAIL -->
         <div class="input-group">
-          <input type="email" id="email" name="email" placeholder=" " required>
+          <input type="email" id="email" name="email" placeholder=" " autocomplete="email" required>
           <label for="email">Email</label>
         </div>
+
+        <!-- TELEPHONE -->
         <div class="input-group">
-          <input type="tel" id="telephone" name="telephone" placeholder=" " required>
+          <input type="tel" id="telephone" name="telephone" placeholder=" " autocomplete="tel" required>
           <label for="telephone">Téléphone</label>
         </div>
+
+        <!-- SUJET -->
         <div class="input-group">
           <select name="sujet" id="sujet" required>
             <option value="" disabled selected></option>
-            <option value="site_vitrine">Site Vitrine</option>
-            <option value="logiciel">Logiciel Sur Mesure</option>
-            <option value="bureau_etudes">Bureau d’Études ALU</option>
-            <option value="autre">Autre</option>
+            <option value="bureau_etudes">Bureau d'études — Menuiserie aluminium, PVC et façades</option>
+            <option value="dessin_technique">Dessin technique AutoCAD 2D</option>
+            <option value="site_vitrine">Création de site vitrine</option>
+            <option value="logiciel">Développement logiciel</option>
+            <option value="buildkl">Projet BuildKL</option>
+            <option value="autre">Autre demande</option>
           </select>
           <label for="sujet">Sujet</label>
         </div>
+
+        <!-- PIECE JOINTE -->
         <div class="form-group">
           <label for="fichier">Joindre un fichier</label>
+
           <label class="file-label" for="fichier">
             <i class="fas fa-paperclip"></i>
             <span id="fileNom">Choisir un fichier (PDF, JPG, DWG, DXF, Word, Excel...)</span>
           </label>
+
           <input type="file" id="fichier" name="fichier"
             accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf,.doc,.docx,.xls,.xlsx,.heic,.webp">
-          <p class="help-text">Taille max : 5 Mo — Pour les fichiers plus lourds,
-            utilisez <a href="https://wetransfer.com" target="_blank" style="color: var(--accent);">WeTransfer</a>,
-            Google Drive ou tout autre
-            service et collez le lien dans le message.
+
+          <p class="help-text">
+            Taille maximale souhaitée : 5 Mo.
+            Pour les fichiers plus lourds, utilisez
+            <a href="https://wetransfer.com" target="_blank" rel="noopener noreferrer"
+              style="color: var(--accent);">WeTransfer</a>,
+            Google Drive ou un autre service de partage, puis collez le lien dans votre message.
           </p>
         </div>
+
+        <!-- MESSAGE -->
         <div class="input-group">
           <textarea name="message" id="message" placeholder=" " required></textarea>
           <label for="message">Message</label>
         </div>
+
+        <!-- CONSENTEMENT -->
         <div class="input-group rgpd-group">
-          <input type="checkbox" id="rgpd" name="rgpd" required>
-          <label for="rgpd">J'accepte que mes données soient utilisées pour me recontacter conformément à la politique
-            de confidentialité.</label>
+          <input type="checkbox" id="rgpd" name="rgpd" value="oui" required>
+          <label for="rgpd">
+            J'accepte que mes données soient utilisées pour me recontacter
+            conformément à la
+            <a href="../Info-Legales/politique-confidentialite.html">
+              politique de confidentialité
+            </a>.
+          </label>
         </div>
+
+        <!-- ENVOI -->
         <div class="input-group">
           <button type="submit" class="btn-cta btn-contact" id="btnEnvoyer">
             <span class="btn-text">Envoyer</span>
           </button>
         </div>
-      </form>
 
+      </form>
     </section>
   </main>
 
-  <!--FOOTER-->
-
+  <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
+
       <div class="footer-brand">
         <img src="../LOGO/sf-logo-blc.png" alt="Logo KLDigiTech">
         <p>Le numérique et la digitalisation par un homme de terrain.</p>
       </div>
+
       <div class="footer-links">
         <h3>Navigation</h3>
         <ul>
           <li><a href="../index.html">Accueil</a></li>
           <li><a href="a-propos.html">À Propos</a></li>
+          <li><a href="prestations.html">Prestations</a></li>
           <li><a href="galerie.html">Galerie</a></li>
           <li><a href="projets.html">Projets</a></li>
           <li><a href="BuildKL.html">BuildKL</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </div>
+
       <div class="footer-legal">
         <h3>Informations légales</h3>
         <ul>
@@ -152,8 +195,12 @@
       </div>
 
     </div>
+
     <div class="footer-bottom">
       <p>© 2026 KLDigiTech - Tous droits réservés</p>
     </div>
   </footer>
+
 </body>
+
+</html>
