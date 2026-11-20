@@ -2654,3 +2654,27 @@ footer {
         gap: 15px;
     }
 }
+/* ===== Correctif responsive : menu burger jusqu a 1200px (la barre de navigation se chevauchait entre 769 et 1200px) ===== */
+@media (max-width: 1200px) {
+    .navbar-nav,
+    .navbar-cta {
+        display: none;
+    }
+
+    .navbar-burger {
+        display: flex;
+    }
+
+    .navbar {
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(20px);
+    }
+}
+
+/* Mention sous le titre de la galerie */
+.galerie-header > span {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.3px;
+}
